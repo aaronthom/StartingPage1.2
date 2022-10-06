@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(0, 255, 255), yellow);
+    filter: grayscale(0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        border-radius: 60%;
+
+        .robot {
+            width: 300px;
+            height: 300px;
+            
+        }
+
+        .cursor {
+            position: absolute;
+            bottom: 40%;
+            left: 47%;
+            width: 70px;
+            height: 70px;
+            pointer-events: none;
+
+            transition: 800ms ease-in-out;
+        }
+
+        ul {
+
+            opacity: 0;
+            transition: 800ms ease-in-out;
+
+            li:nth-child(1) {
+                animation: circle1 20s linear infinite;
+            }
+
+            li:nth-child(2) {
+                animation: circle2 20s linear infinite;
+            }
+
+            li:nth-child(3) {
+                animation: circle3 20s linear infinite;
+            }
+
+            li:nth-child(4) {
+                animation: circle4 20s linear infinite; 
+            }
+
+            li:nth-child(5) {
+                animation: circle5 20s linear infinite;
+                
+            }
+
+            li:nth-child(6) {
+                animation: circle6 20s linear infinite;
+            }
+
+            li:nth-child(7) {
+                animation: circle7 20s linear infinite;
+            }
+
+
+            li {
+                list-style: none;
+
+                background-color: white;
+                height: 80px;
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50px;
+
+                position: absolute;
+                top: 46.2%;  /* position the top  edge of the element at the middle of the parent */
+                left: 47.7%; /* position the left edge of the element at the middle of the parent */
+            
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+                margin: auto;
+
+                a {
+                    font-size: 3rem;
+                    color: rgb(57, 182, 255);
+    
+                }
+            }
+        }
+
+        .appear {
+            opacity: 1;
+            transition: 800ms ease-in-out;
+        }
+
+        .disappear {
+            opacity: 0;
+            transition: 800ms ease-in-out;
+        }
+
+        @keyframes circle1 {
+            0% {
+                transform: rotate(0deg) translate(-300px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translate(-300px) rotate(-360deg);
+            }
+        }
+
+        @keyframes circle2 {
+            0% {
+                transform: rotate(20deg) translate(-300px) rotate(-20deg);
+            }
+            100% {
+                transform: rotate(380deg) translate(-300px) rotate(-380deg);
+            }
+        }
+
+        @keyframes circle3 {
+            0% {
+                transform: rotate(40deg) translate(-300px) rotate(-40deg);
+            }
+            100% {
+                transform: rotate(400deg) translate(-300px) rotate(-400deg);
+            }
+        }
+
+        @keyframes circle4 {
+            0% {
+                transform: rotate(60deg) translate(-300px) rotate(-60deg);
+            }
+            100% {
+                transform: rotate(420deg) translate(-300px) rotate(-420deg);
+            }
+        }
+
+        @keyframes circle5 {
+            0% {
+                transform: rotate(80deg) translate(-300px) rotate(-80deg);
+            }
+            100% {
+                transform: rotate(440deg) translate(-300px) rotate(-440deg);
+            }
+        }
+
+        @keyframes circle6 {
+            0% {
+                transform: rotate(100deg) translate(-300px) rotate(-100deg);
+            }
+            100% {
+                transform: rotate(460deg) translate(-300px) rotate(-460deg);
+            }
+        }
+
+        @keyframes circle7 {
+            0% {
+                transform: rotate(120deg) translate(-300px) rotate(-120deg);
+            }
+            100% {
+                transform: rotate(480deg) translate(-300px) rotate(-480deg);
+            }
+        }
+    
+
+    
+    }
+}
